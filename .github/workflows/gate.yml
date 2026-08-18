@@ -1,0 +1,51 @@
+name: gate
+
+# Every push and every pull request. The sanitisation gate is not advisory: this repo is public
+# and its raw material is private incident reports, so a merge that leaks is unrecoverable.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09  # v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5
+        with:
+          python-version: '3.12'
+
+      # Ordered deliberately: the gate is proven able to FAIL before its pass is believed.
+      - name: Gate self-test (prove it can go red)
+        run: python scripts/check_notes.py --self-test
+
+      - name: Sanitisation and structure
+        run: python scripts/check_notes.py
+
+      - name: Full history scan
+        # The working tree being clean says nothing about what is recoverable from git. A secret
+        # committed once and removed in the next commit is still public forever.
+        run: |
+          git log -p --no-color -- notes/ README.md > /tmp/history.txt || true
+          python - <<'PY'
+          import re, sys, pathlib
+          sys.path.insert(0, "scripts")
+          from check_notes import scan_text
+          text = pathlib.Path("/tmp/history.txt").read_text(encoding="utf-8", errors="ignore")
+          added = "\n".join(l[1:] for l in text.splitlines() if l.startswith("+"))
+          hits = scan_text(added, "git-history")
+          if hits:
+              print(f"REFUSED -- {len(hits)} violation(s) reachable in git history:", file=sys.stderr)
+              for h in hits[:40]:
+                  print("  " + h, file=sys.stderr)
+              raise SystemExit(1)
+          print("OK -- git history clean")
+          PY
