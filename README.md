@@ -20,6 +20,7 @@ you can apply to a stack that looks nothing like ours.
 | [Liveness Is Not Identity](notes/liveness-is-not-identity.md) | A port answering proves something is there. It does not prove it's the thing you deployed. |
 | [A Flag Is Not a Control](notes/a-flag-is-not-a-control.md) | A flag that says an exposure exists is not a control. The thing that bounds it is — and it must be inside the hash. |
 | [Make the Instrument Disagree With Itself](notes/make-the-instrument-disagree.md) | Before you trust a probe, feed it something it must reject. If it answers the same to both, it has told you nothing. |
+| [The File Nobody Owns Is the One Everybody Reads](notes/the-file-nobody-owns.md) | The more often a file is read automatically, the less often it is read deliberately. Audit those first. |
 
 ## The pattern underneath
 
