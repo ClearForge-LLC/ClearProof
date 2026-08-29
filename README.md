@@ -21,6 +21,7 @@ you can apply to a stack that looks nothing like ours.
 | [A Flag Is Not a Control](notes/a-flag-is-not-a-control.md) | A flag that says an exposure exists is not a control. The thing that bounds it is — and it must be inside the hash. |
 | [Make the Instrument Disagree With Itself](notes/make-the-instrument-disagree.md) | Before you trust a probe, feed it something it must reject. If it answers the same to both, it has told you nothing. |
 | [The File Nobody Owns Is the One Everybody Reads](notes/the-file-nobody-owns.md) | The more often a file is read automatically, the less often it is read deliberately. Audit those first. |
+| [An Absence Has No Symptom](notes/an-absence-has-no-symptom.md) | A check fires on a wrong value. Nothing fires on a missing one. |
 
 ## The pattern underneath
 
@@ -38,6 +39,16 @@ every one looked authoritative right up until something unrelated contradicted i
 
 That's the through-line, and it's why this repo is called what it is: **the difference between a claim
 and a proof.**
+
+There is a second class underneath it, and it is quieter: **a check fires on a wrong value, and
+nothing fires on a missing one.** A specification that enumerated nine fields while its own reference
+implementation hashed ten, and never mentioned the tenth. A convention that stopped being followed for
+twenty-five consecutive units of work while the planning documents kept citing it — unnoticed because
+the *outputs* kept arriving on schedule, so the paper trail looked complete from outside. Neither
+artifact stated anything false. Both were merely incomplete, and incompleteness produces no symptom.
+
+Every assertion you write is about something that exists. That is why absence is the failure mode a
+test suite is structurally blind to.
 
 ## Why agents sharpen this
 
