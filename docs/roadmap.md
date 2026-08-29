@@ -56,6 +56,9 @@ that already earns a note.
 the moment the fix worked) · *a content sweep sees writers that have written; a start-path sweep sees
 writers that can* · *a wrong number that looks right is worse than a missing one* · the
 architect/builder division of labour and what it actually buys.
+**Published 2026-08-29:** *the file nobody owns* (agent-primer staleness, measured across five repos)
+and *an absence has no symptom* (a spec behind its own reference implementation; a convention that
+lapsed for twenty-five work orders). Both drawn from one session's record.
 **Exit gate:** every source repo read through once with a candidate list recorded; each candidate
 either published, rejected with a reason, or **deferred pending consent** where it derives from
 client work.
@@ -83,6 +86,7 @@ written for any of them** — i.e. the editing pass has become routine.
 | Date | Change | Rationale |
 |---|---|---|
 | 2026-08-18 | Created. P0 and P1 passed on creation. | The gate and three seed notes were built in one sitting; recording them as passed phases rather than pretending they were sequenced separately. |
+| 2026-08-29 | Two notes published, one PR each per the standing cadence. README gains a second named class beside the instrument one. | One session produced two independent instances of the absence class — a standard seven days behind its reference implementation, and a work-order convention that had lapsed five weeks while its outputs kept filing on time. Two instances in a week is a class, not an anecdote. |
 
 ## Provenance
 
