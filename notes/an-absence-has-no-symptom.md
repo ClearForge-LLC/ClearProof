@@ -78,6 +78,9 @@ sections back at the builder. We had been treating that as verbosity. It was a m
 
 > **A check fires on a wrong value. Nothing fires on a missing one.**
 
+Its companion is [Absence Needs Its Own Clock](absence-needs-its-own-clock.md): what to do once you
+*have* written the detector, and why wiring it to the wrong trigger leaves you exactly as blind.
+
 Absence is the failure mode your test suite is structurally blind to, because every assertion you
 write is about something that exists.
 

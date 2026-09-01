@@ -42,6 +42,14 @@ mean by "fine."**
 Worse, it accrues confidence over time. Every quiet day is read as evidence the system is healthy,
 when it is evidence of nothing whatsoever.
 
+## A companion, not a duplicate
+
+[An Absence Has No Symptom](an-absence-has-no-symptom.md) is the other half of this. Its rule is
+*a check fires on a wrong value; nothing fires on a missing one* — the test that was never written.
+This one is about a detector that **was** written, carefully, and wired to an event the failure
+removes. Same enemy, opposite failure: there, nothing was watching; here, something was watching
+with its eyes closed at exactly the wrong moment.
+
 ## The shape, stated generally
 
 **A detector for absence cannot be driven by the events whose absence it detects.**
