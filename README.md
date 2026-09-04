@@ -23,6 +23,7 @@ you can apply to a stack that looks nothing like ours.
 | [Absence Needs Its Own Clock](notes/absence-needs-its-own-clock.md) | A detector for "nothing happened" cannot be driven by the thing that stopped happening. It will be quiet in exactly the situation you built it for. |
 | [The File Nobody Owns Is the One Everybody Reads](notes/the-file-nobody-owns.md) | The more often a file is read automatically, the less often it is read deliberately. Audit those first. |
 | [An Absence Has No Symptom](notes/an-absence-has-no-symptom.md) | A check fires on a wrong value. Nothing fires on a missing one. |
+| [The Guard Sits Behind Its Own Exit](notes/behind-its-own-exit.md) | Code written for a condition must be reachable *in* that condition. Presence is not execution. |
 
 ## The pattern underneath
 
