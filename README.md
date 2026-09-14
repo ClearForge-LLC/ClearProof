@@ -27,6 +27,7 @@ you can apply to a stack that looks nothing like ours.
 | [The Mutation That Didn't Happen](notes/the-mutation-that-didnt-happen.md) | Assert the mutation took effect before you interpret the outcome. A change that matched nothing succeeds silently. |
 | [The Gate That Verifies Against the Defect](notes/the-gate-that-checks-the-defect.md) | When a ruling forbids a source, every check that consumed it is now suspect — including the ones enforcing the ruling. |
 | [The Artifact That Rotted in Place](notes/the-artifact-that-rotted-in-place.md) | An open change decays against a moving base. Staleness is measured in merges, not days — and the artifact never changes while it rots. |
+| [The Tip That Advertised Its Scaffold](notes/the-tip-that-advertised-its-scaffold.md) | Never leave a live pull-request tip on placeholder or loading content. Push atomic restores only. |
 | [The Failure That Heals Its Own Symptom](notes/the-failure-that-heals-its-symptom.md) | A recovery path must not clear an alarm it cannot verify. If an operation can stop half-done, the half-done state needs a name of its own. |
 
 ## The pattern underneath
