@@ -24,6 +24,10 @@ you can apply to a stack that looks nothing like ours.
 | [The File Nobody Owns Is the One Everybody Reads](notes/the-file-nobody-owns.md) | The more often a file is read automatically, the less often it is read deliberately. Audit those first. |
 | [An Absence Has No Symptom](notes/an-absence-has-no-symptom.md) | A check fires on a wrong value. Nothing fires on a missing one. |
 | [The Guard Sits Behind Its Own Exit](notes/behind-its-own-exit.md) | Code written for a condition must be reachable *in* that condition. Presence is not execution. |
+| [The Mutation That Didn't Happen](notes/the-mutation-that-didnt-happen.md) | Assert the mutation took effect before you interpret the outcome. A change that matched nothing succeeds silently. |
+| [The Gate That Verifies Against the Defect](notes/the-gate-that-checks-the-defect.md) | When a ruling forbids a source, every check that consumed it is now suspect — including the ones enforcing the ruling. |
+| [The Artifact That Rotted in Place](notes/the-artifact-that-rotted-in-place.md) | An open change decays against a moving base. Staleness is measured in merges, not days — and the artifact never changes while it rots. |
+| [The Failure That Heals Its Own Symptom](notes/the-failure-that-heals-its-symptom.md) | A recovery path must not clear an alarm it cannot verify. If an operation can stop half-done, the half-done state needs a name of its own. |
 
 ## The pattern underneath
 
