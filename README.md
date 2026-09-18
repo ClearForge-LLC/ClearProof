@@ -15,6 +15,10 @@ you can apply to a stack that looks nothing like ours.
 
 ## The notes
 
+### Systems
+
+How programs, controls and checks fail.
+
 | Note | The rule |
 |---|---|
 | [Liveness Is Not Identity](notes/liveness-is-not-identity.md) | A port answering proves something is there. It does not prove it's the thing you deployed. |
@@ -29,6 +33,16 @@ you can apply to a stack that looks nothing like ours.
 | [The Artifact That Rotted in Place](notes/the-artifact-that-rotted-in-place.md) | An open change decays against a moving base. Staleness is measured in merges, not days — and the artifact never changes while it rots. |
 | [The Tip That Advertised Its Scaffold](notes/the-tip-that-advertised-its-scaffold.md) | Never leave a live pull-request tip on placeholder or loading content. Push atomic restores only. |
 | [The Failure That Heals Its Own Symptom](notes/the-failure-that-heals-its-symptom.md) | A recovery path must not clear an alarm it cannot verify. If an operation can stop half-done, the half-done state needs a name of its own. |
+| [Name What Your Test Stood In For](notes/the-stand-in-that-looked-like-production.md) | A substitute becomes most convincing as it approaches the real thing — and the closer it gets, the less anyone re-checks that it is still a substitute. |
+| [The Alarm Path Is the Least-Tested Code You Have](notes/the-alarm-that-worked-until-it-was-needed.md) | Code that runs only when something is already wrong is the least-exercised and most consequential code you own. The success path passing is what hides it. |
+
+### Orchestration
+
+**A deliberate departure from the rest of this repo.** Every note above is about a program — how code, controls and checks fail. The notes below are about *instructing an agent*: the failure is in the specification handed to it, not in anything it executed. They are marked separately rather than blended in, because the reader who wants systems lessons should be able to tell which is which, and because a repo that quietly widens its own scope is doing the thing this repo exists to warn about.
+
+| Note | The rule |
+|---|---|
+| [A Goal Must End Where the Agent's Authority Ends](notes/a-goal-it-was-forbidden-to-reach.md) | A goal only reachable through an action the agent is forbidden to take can never be met, and a completion loop will pursue it indefinitely. |
 
 ## The pattern underneath
 
