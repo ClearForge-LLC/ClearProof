@@ -44,10 +44,13 @@ How programs, controls and checks fail.
 |---|---|
 | [A Goal Must End Where the Agent's Authority Ends](notes/a-goal-it-was-forbidden-to-reach.md) | A goal only reachable through an action the agent is forbidden to take can never be met, and a completion loop will pursue it indefinitely. |
 
+This list grows as the work does. A note is added when a new failure teaches something the existing
+rules don't already cover.
+
 ## The pattern underneath
 
-Roughly two-thirds of the interesting failures in our private record are **one bug wearing different
-clothes: a check that reported success while measuring the wrong thing.**
+The failure that keeps recurring in our private record is **one bug wearing different clothes: a check that
+reported success while measuring the wrong thing.**
 
 A process-matching command that matched its own command line. A word boundary that made a search
 structurally unable to find most of what it was looking for. A digest that turned out to be the

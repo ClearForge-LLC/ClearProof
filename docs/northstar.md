@@ -21,8 +21,8 @@ isolation and invisible in aggregate.
 
 We have the aggregate. Building a hardened infrastructure stack with AI agents as builders produced
 a numbered, dated, reproduction-carrying record of every failure, because the review discipline
-required one. **Roughly two-thirds of the interesting ones are the same bug in different clothes: a
-check that reported success while measuring the wrong thing.**
+required one. **The one that keeps recurring is the same bug in different clothes: a check that
+reported success while measuring the wrong thing.**
 
 That's a contribution, and it costs almost nothing to make — the corpus is generated whether or not
 anyone publishes it.
