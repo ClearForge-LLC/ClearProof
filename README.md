@@ -46,6 +46,14 @@ How programs, controls and checks fail.
 |---|---|
 | [A Goal Must End Where the Agent's Authority Ends](notes/a-goal-it-was-forbidden-to-reach.md) | A goal only reachable through an action the agent is forbidden to take can never be met, and a completion loop will pursue it indefinitely. |
 
+### Artifacts
+
+**The second departure, added deliberately.** Systems notes are about programs; Orchestration notes are about the specification handed to an agent. The notes below are about neither: the failure is in *what an agent produced* — a claim, a document, a published page — and in how that output propagated before anyone checked it. This section exists because the alternative was filing such a note under a heading it didn't fit, and a repo that quietly stretches its own categories is doing the thing this repo exists to warn about.
+
+| Note | The rule |
+|---|---|
+| [A Number Nobody Counted](notes/a-number-nobody-counted.md) | A quantity an agent supplies is a claim, not a measurement. Mark it where it is born, or don't publish it. |
+
 This list grows as the work does. A note is added when a new failure teaches something the existing
 rules don't already cover.
 
