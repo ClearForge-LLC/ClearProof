@@ -36,6 +36,7 @@ How programs, controls and checks fail.
 | [Name What Your Test Stood In For](notes/the-stand-in-that-looked-like-production.md) | A substitute becomes most convincing as it approaches the real thing — and the closer it gets, the less anyone re-checks that it is still a substitute. |
 | [The Alarm Path Is the Least-Tested Code You Have](notes/the-alarm-that-worked-until-it-was-needed.md) | Code that runs only when something is already wrong is the least-exercised and most consequential code you own. The success path passing is what hides it. |
 | [A Returned Failure That Every Caller Discards Is a Silent Failure](notes/the-answer-nobody-read.md) | The information existed, was correct, and was thrown away. Missing information needs a new check; discarded information needs only that somebody read it. |
+| [The Check I Wrote to Check Myself](notes/the-check-i-wrote-to-check-myself.md) | Code you wrote to verify yourself is unreviewed code in the highest-trust position. Make it prove it can refuse, and make its silence fatal. |
 
 ### Orchestration
 
