@@ -66,8 +66,10 @@ REQUIRED_HEADINGS = ("## The incident", "## The rule")
 def scan_text(text: str, label: str) -> list[str]:
     out: list[str] = []
     for lineno, line in enumerate(text.splitlines(), 1):
-        if ALLOWED.search(line):
-            continue
+        # Blank out permitted placeholders instead of skipping the line: a line that mentions
+        # example.com must still be scanned for the real hostname beside it. (Found by the
+        # clearseal-reference leak gate while porting these rules.)
+        line = ALLOWED.sub(" ", line)
         for name, pat, why in RULES:
             m = pat.search(line)
             if m:
@@ -146,6 +148,8 @@ def self_test() -> int:
 
     if scan_text("see example.com and 127.0.0.1 and <REDACTED>", "selftest"):
         failed.append("allowlist leaked: a permitted placeholder was flagged")
+    if not scan_text("see example.com beside abc.clearforge.dev on one line", "selftest"):
+        failed.append("placeholder masked the line: a real hostname next to example.com was not flagged")
 
     missing = check_structure(Path("x.md"), "# Title\n\nno sections here\n")
     if len(missing) < 2:
