@@ -23,6 +23,7 @@ How programs, controls and checks fail.
 |---|---|
 | [Liveness Is Not Identity](notes/liveness-is-not-identity.md) | A port answering proves something is there. It does not prove it's the thing you deployed. |
 | [A Flag Is Not a Control](notes/a-flag-is-not-a-control.md) | A flag that says an exposure exists is not a control. The thing that bounds it is — and it must be inside the hash. |
+| [A Public Channel Has No Private Fields](notes/the-channel-whose-only-secret-is-its-name.md) | A channel's confidentiality is a property of the channel, not of the message you meant to send. If it is public, the control inspects the bytes. |
 | [Make the Instrument Disagree With Itself](notes/make-the-instrument-disagree.md) | Before you trust a probe, feed it something it must reject. If it answers the same to both, it has told you nothing. |
 | [Absence Needs Its Own Clock](notes/absence-needs-its-own-clock.md) | A detector for "nothing happened" cannot be driven by the thing that stopped happening. It will be quiet in exactly the situation you built it for. |
 | [The File Nobody Owns Is the One Everybody Reads](notes/the-file-nobody-owns.md) | The more often a file is read automatically, the less often it is read deliberately. Audit those first. |
