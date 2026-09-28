@@ -26,6 +26,7 @@ How programs, controls and checks fail.
 | [A Public Channel Has No Private Fields](notes/the-channel-whose-only-secret-is-its-name.md) | A channel's confidentiality is a property of the channel, not of the message you meant to send. If it is public, the control inspects the bytes. |
 | [Make the Instrument Disagree With Itself](notes/make-the-instrument-disagree.md) | Before you trust a probe, feed it something it must reject. If it answers the same to both, it has told you nothing. |
 | [Test the Instrument Against the Original Incident](notes/the-probe-that-passed-the-fake.md) | A probe can reject every failure you imagine and still be blind to the one that happened. Run it against the real incident. |
+| [Extraction Moves the Blind Spot](notes/the-blind-spot-moves-up.md) | Making code testable moves the untested region up to the caller. Mutate the caller, or you relocated the gap and called it closed. |
 | [Absence Needs Its Own Clock](notes/absence-needs-its-own-clock.md) | A detector for "nothing happened" cannot be driven by the thing that stopped happening. It will be quiet in exactly the situation you built it for. |
 | [The File Nobody Owns Is the One Everybody Reads](notes/the-file-nobody-owns.md) | The more often a file is read automatically, the less often it is read deliberately. Audit those first. |
 | [An Absence Has No Symptom](notes/an-absence-has-no-symptom.md) | A check fires on a wrong value. Nothing fires on a missing one. |
